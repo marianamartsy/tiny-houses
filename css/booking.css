@@ -1,0 +1,177 @@
+.booking-page {
+	background-image: var(--background-garadient-solid);
+}
+.home{
+	padding: 15px;
+}
+.home-link{
+	text-decoration: none;
+	color: var(--pure-white-color);
+	letter-spacing: 3px;
+	padding: 7px;
+	border: 1px solid var(--pure-white-color);
+	border-radius: 5px;
+	font-size: 15px;
+}
+.booking-container {
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+}
+.booking-heading {
+	position: relative;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--pure-white-color);
+	letter-spacing: 2px;
+}
+.data-boxes {
+	background-color: var(--pure-white-color);
+	font-size: 20px;
+	border-radius: 7px;
+	padding: 15px 7px;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+}
+.data-box,
+.contact-details__label,
+.contact-details__input,
+.stay-details__total-price,
+#room-select,
+#guests-select,
+#date-start,
+#date-end {
+	border: 2px solid var(--dark-color);
+	border-radius: 4px;
+	padding: 7px;
+	display: flex;
+}
+#room-select,
+#guests-select,
+.checkbox,
+.stay-details__total-price {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-left: auto;
+}
+#room-select,
+#guests-select,
+#date-start,
+#date-end,
+.stay-details__total-price {
+	appearance: none;
+	font-size: 15px;
+}
+#room-select,
+#guests-select,
+#date-start,
+#date-end,
+.checkbox {
+	cursor: pointer;
+}
+#room-select {
+	width: 70%;
+}
+#guests-select {
+	width: 11%;
+}
+.breakfast {
+	font-size: 13px;
+	color: var(--dark-color);
+	margin: 7px;
+}
+.stay-details__date {
+	flex-direction: column;
+}
+#date-start,
+#date-end {
+	margin: 5px 15px;
+	width: 50%;
+}
+#date-error,
+#fields-error, .fields-error {
+	color: var(--error-color);
+	text-align: center;
+    font-size: 16px;
+margin: 5px;
+}
+.stay-details__total-price {
+	width: 20%;
+}
+.contact-details__apply,
+.payment-details__confirm {
+	margin-top: 13px;
+}
+.required-fields {
+	font-size: 13px;
+}
+.disabled-styles {
+	background-color: var(--disabled-color);
+	pointer-events: none;
+}
+.contact-details__input{
+	width: 100%;
+}
+.contact-details__form-box .error-text {
+	margin: 5px;
+	font-size: 14px;
+	color: var(--error-color);
+	visibility: hidden;
+}
+.contact-details__form-box.error .error-text {
+	visibility: visible;
+}
+.payment-details__cardpayment-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.cardholder-name,
+.card-number {
+	width: 100%;
+}
+#card-element,
+.cardholder-name {
+	border: 2px solid var(--dark-color);
+	border-radius: 4px;
+	margin: 20px 0;
+	padding: 10px;
+}
+#amount-to-be-charged {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: right;
+    color: var(--error-color);
+}
+.payment-details__cardpayment {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.payment-details{
+    margin-bottom: 50px;
+}
+@media (min-width: 576px) {
+	.stay-details__date {
+		flex-direction: row;
+	}
+	#date-start,
+	#date-end {
+		margin: 0 15px;
+		width: 20%;
+	}
+}
+@media (min-width: 768px) {
+	.data-boxes {
+		padding: 30px;
+	}
+	.booking-heading {
+		font-size: 25px;
+	}
+}

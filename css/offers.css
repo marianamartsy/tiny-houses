@@ -1,0 +1,92 @@
+.offers {
+	position: relative;
+	padding: 40px 15px;
+	background-image: var(--background-garadient), url('../img/offers_hero_windows_640.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.offers__section-heading {
+	color: var(--pure-white-color);
+}
+.offers__option {
+	margin: 10px 0;
+	box-shadow: 5px 5px 10px #2e2e2e2e;
+	overflow: hidden;
+	background-color: var(--pure-white-color);
+	border-radius: 7px;
+}
+.offers__option-img {
+	width: 100%;
+	transition: transform 0.3s;
+}
+.offers__option-img:hover {
+	transform: scale(1.1);
+}
+.offers__option-info {
+	padding: 25px;
+    background-color: var(--pure-white-color);
+    z-index: 10;
+}
+.offers__option-heading {
+	margin-bottom: 7px;
+	font-size: 25px;
+	font-weight: 200;
+	color: var(--dark-color);
+}
+.offers__option-text {
+	color: var(--dark-color);
+	font-size: 15px;
+	line-height: 1.5;
+}
+.offers__option-btn {
+	margin-top: 15px;
+	padding: 10px;
+	width: 100%;
+	color: var(--pure-white-color);
+	background-color: var(--main-color);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.7s;
+}
+
+@media (min-width: 768px) {
+	.offers__option {
+		display: flex;
+		margin: 30px 0;
+		width: 100%;
+	}
+	.offers__option-img {
+		width: 50%;
+		height: auto;
+        
+	}
+	.offers__option-img--right {
+		order: 1;
+	}
+	.offers__option-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.offers__option-heading {
+		margin-bottom: 8px;
+		font-size: 30px;
+	}
+	.offers__option-btn {
+		padding: 15px;
+	}
+}
+@media (min-width: 992px) {
+	.offers {
+		background-image: var(--background-garadient), url('../img/offers_hero_windows_1920.jpg');
+	}
+	.offers__option-img {
+        object-fit: cover;
+	}
+	.offers__option-text {
+		font-size: 20px;
+	}
+}

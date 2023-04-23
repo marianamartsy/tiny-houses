@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny House</title>
+    <link rel="shortcut icon" href="img/mushroom-icon_640.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <main class="booking-page">
+        <div class="home"><a href="index.html" class="home-link">Tiny House Village</a></div>
+        <section class="stay-details booking-container">
+            <h2 class="booking-heading">Booking Details</h2>
+            <div class="data-boxes">
+                <div class="stay-details__room data-box">
+                    <label for="room-select">Choose the room*</label>
+                    <select name="room" class="disable" id="room-select">
+                        <option value="" selected>Choose the room</option>
+                        <option value="forest-retreat-twin">Forest Retreat Twin Room</option>
+                        <option value="forest-haven-king">Forest Haven King Room</option>
+                        <option value="woodland-suite">Woodland Suite</option>
+                        <option value="forest-view-double">Forest View Double Room</option>
+                    </select>
+                </div>
+                <div class="stay-details__guests data-box">
+                    <label for="guests-select">Choose the number of guests*</label>
+                    <select name="guests" class="disable" id="guests-select">
+                        <option value="" selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="stay-details__kids data-box">
+                    <label for="kids">Kids under 3 y.o.</label>
+                    <input type="checkbox" class="checkbox" id="kids" name="kids">
+                </div>
+                <div class="stay-details__date data-box">
+                    <label for="date-start">Check in*</label>
+                    <input type="text" class="disable" id="date-start" name="date-start" placeholder="Choose date">
+                    <label for="date-end">Check out*</label>
+                    <input type="text" class="disable" id="date-end" name="date-end" placeholder="Choose date">
+                </div>
+                <div id="date-error" style="display: none;">
+                </div>
+                <div class="stay-details__breakfast data-box">
+                    <label for="breakfast">Breakfast</label>
+                    <p class="breakfast"></p>
+                    <input type="checkbox" class="checkbox" id="breakfast" name="breakfast">
+                </div>
+                <div class="stay-details__price data-box">
+                    <p>Total price</p>
+                    <p class="stay-details__total-price"></p>
+                </div>
+        </section>
+        <section class="contact-details booking-container">
+            <h2 class="booking-heading">contact details</h2>
+            <div class="data-boxes contact-details__list">
+                <div class="contact-details__form-box">
+                    <label for="name" class="contact-details__label">Full name*</label>
+                    <input type="text" name="name" class="contact-details__input disable" id="name"
+                        placeholder="Your Name" autocomplete="name">
+                    <div class="error-text">error</div>
+                </div>
+                <div class="contact-details__form-box">
+                    <label for="email" class="contact-details__label">Email*</label>
+                    <input type="text" name="_replyto" placeholder="Your Email" class="contact-details__input disable"
+                        id="email" autocomplete="email">
+                    <div class="error-text">error</div>
+                </div>
+                <div class="contact-details__form-box">
+                    <label for="phone" class="contact-details__label">Phone number*</label>
+                    <input type="tel" name="phone" class="contact-details__input disable" id="phone"
+                        placeholder="Your phone number" autocomplete="tel">
+                    <div class="error-text">error</div>
+                </div>
+                <div class="contact-details__form-box">
+                    <label for="address" class="contact-details__label">Address*</label>
+                    <input type="text" placeholder="Your address" class="contact-details__input disable" id="address"
+                        name="address" autocomplete="address">
+                    <div class="error-text">error</div>
+                </div>
+                <label for="terms-and-conditions">I agree to the Terms and Conditions* <input type="checkbox"
+                        id="terms-and-conditions" name="terms-and-conditions"></label>
+                <button class="contact-details__apply contact__form-btn btn-special-animation">Apply</button>
+                <p class="required-fields">*required fields</p>
+                <div id="fields-error" class="fields-error" style="display: none;">
+                </div>
+            </div>
+        </section>
+        <section class="payment-details booking-container">
+            <h2 class="booking-heading">Payment details</h2>
+            <div class="data-boxes">
+                <div class="payment-details__cash data-box">
+                    <label for="cash">Cash payment</label>
+                    <input type="checkbox" class="checkbox" id="cash" name="cash" disabled>
+                </div>
+                <div class="payment-details__card data-box">
+                    <label for="card">Card payment</label>
+                    <input type="checkbox" class="checkbox" id="card" name="card" disabled>
+                </div>
+                <button onclick="location.href='reservation-success.html'"
+                    class="payment-details__confirm contact__form-btn" disabled>Confirm reservation</button>
+                <div class="payment-details__cardpayment data-box">
+                    <form id="payment-form" class="payment-details__cardpayment-form">
+                        <div class="form-row">
+                            <div id="amount-to-be-charged"></div>
+                            <label>Cardholder Name<input class="cardholder-name" name="cardholder-name"
+                                    required></label>
+                            <label for="card-element">
+                                Credit or debit card
+                            </label>
+                            <div id="card-element" class="card-number"> </div>
+                            <div id="card-errors" class="fields-error" role="alert"></div>
+                        </div>
+                        <button type="submit"
+                            class="payment-details__submit contact__form-btn btn-special-animation">Confirm
+                            reservation and pay</button>
+                    </form>
+                </div>
+        </section>
+        <footer class="footer">
+            <div class="section">
+                <div class="footer__boxes">
+                    <div class="footer__box">
+                        <h3 class="footer__box-title"><i class="fa-solid fa-heart"></i> Mar & Co.</h3>
+                        <p class="footer__bottom-text">Your opportunity to disconnect from the hustle and bustle of city
+                            life and unwind in a serene
+                            setting.</p>
+                        <div class="footer__box-social">
+                            <a href="https://twitter.com" target="_blank" class="footer__box-link"><i
+                                    class="fab fa-twitter-square"></i></a>
+                            <a href="https://www.facebook.com" target="_blank" class="footer__box-link"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://www.instagram.com" target="_blank" class="footer__box-link"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__box">
+                        <h3 class="footer__box-title">Contacts</h3>
+                        <p class="footer__bottom-text">Feel free to contact us with any questions or to book a
+                            reservation:
+                        </p>
+                        <hr>
+                        <ul class="footer__box-list">
+                            <li class="footer__box-list-item"> <strong>Phone:</strong> 555-1234</li>
+                            <li class="footer__box-list-item"><strong>Email:</strong> info@forestcabins.com</li>
+                            <li class="footer__box-list-item"><strong>Address:</strong> 123 Main Street, Anytown USA
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> Tiny House Village</p>
+        </footer>
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/booking-flatpickr-calendar.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/booking-stripe.js"></script>
+    <script src="https://kit.fontawesome.com/1e91e5f858.js" crossorigin="anonymous"></script>
+    <script src="js/selected-room.js"></script>
+    <script src="js/booking-calculate-total-price.js"></script>
+    <script src="js/booking-validation.js"></script>
+    <script src="js/booking-choosing-payment-method.js"></script>
+    <script src="js/footer-year.js"></script>
+</body>
+
+</html>

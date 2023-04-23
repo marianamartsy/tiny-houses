@@ -1,0 +1,124 @@
+.nav__items{
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	transform: translateX(100%);
+	transition: .7s cubic-bezier(0.75, 0.082, 0.165, 1);
+	background-image: var(--background-garadient-solid);
+	z-index: 100;
+}
+.nav__item {
+	position: relative;
+	display: block;
+	color: var(--pure-white-color);
+	margin: 8px 0;
+	padding: 8px 26px;
+	font-size: 27px;
+	text-decoration: none;
+}
+.nav__item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 100%;
+	transform: scaleY(0);
+	transition: transform 0.4s;
+	background-color: var(--pure-white-color);
+}
+
+.nav__item:hover::before {
+	transform: scaleY(1);
+}
+
+.active {
+	transform: translateX(0);
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s both;
+}
+
+
+/* Burger btn */
+
+
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 13px;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+}
+.burger-btn:focus {
+	outline: none;
+	border: 2px solid var(--light-color);
+	border-radius: 8px;
+}
+.burger-btn__box {
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 30px;
+}
+.burger-btn__element,
+.burger-btn__element::after,
+.burger-btn__element::before {
+	position: absolute;
+	right: 0;
+	height: 3px;
+	content: '';
+	background-color: var(--pure-white-color);
+	transition: width 0.3s;
+}
+.burger-btn__element {
+	width: 100%;
+}
+.burger-btn__element::after {
+	top: 13px;
+	width: 60%;
+}
+.burger-btn__element::before {
+	top: 27px;
+	width: 30%;
+	transition-delay: 0.1s;
+}
+.burger-btn:hover .burger-btn__element::after,
+.burger-btn:hover .burger-btn__element::before {
+	width: 100%;
+}
+
+.dark-bars-color,
+.dark-bars-color::after,
+.dark-bars-color::before {
+background-color: var(--dark-color);
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+	.nav__item {
+		font-size: 40px;
+	}
+	
+}

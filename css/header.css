@@ -1,0 +1,51 @@
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+	height: 90vh;
+	background-image: var(--background-garadient), url('../img/tiny_house_header_640.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: scroll;
+}
+.header__title {
+	color: var(--pure-white-color);
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+}
+.header__text {
+	color: var(--pure-white-color);
+	letter-spacing: 1.7px;
+	font-size: 25px;
+}
+.header__btn {
+	padding: 10px;
+	text-decoration: none;
+	border: 2px solid var(--pure-white-color);
+	border-radius: 7px;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 10px;
+	color: var(--pure-white-color);
+	transition: background-color .7s;
+}
+
+
+@media (min-width: 768px) {
+	.header {
+		background-image: var(--background-garadient), url('../img/tiny_house_header_1920.jpg');
+		background-attachment: fixed;
+	}
+	.header__btn {
+	padding: 20px;
+	font-size: 20px;
+	}
+	.header__text {
+		font-size: 35px;
+	}
+}

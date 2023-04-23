@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+::before,
+::after,
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--main-color: rgb(80, 27, 83);
+	--secondary-color: rgba(219, 173, 222, 0.7);
+	--light-color: rgb(248, 240, 249);
+	--dark-color: rgb(121, 116, 121);
+	--pure-white-color: rgba(255, 255, 255, 0.923);
+	--disabled-color: rgb(229, 224, 224);
+	--error-color: rgb(219, 47, 47);
+	--background-garadient: linear-gradient(45deg, rgba(245, 226, 194, 0.35), rgba(209, 120, 231, 0.35));
+	--background-garadient-solid: linear-gradient(45deg, rgb(248, 45, 231), rgb(123, 103, 12));
+	scroll-behavior: smooth;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+img {
+	display: block;
+	width: 100%;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+}
+
+.section-heading {
+	position: relative;
+	margin: 20px 0;
+	font-size: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--main-color);
+	letter-spacing: 2px;
+}
+
+.section-padding {
+	padding: 15px 13px;
+}
+.btn-special-animation:hover {
+	background-color: var(--secondary-color);
+}
+
+@media (min-width: 576px) {
+	.section-heading {
+		font-size: 30px;
+	}
+}
+@media (min-width: 768px) {
+	.section-heading {
+		font-size: 40px;
+		padding: 40px;
+	}
+	.section-padding {
+		padding: 20px 19px;
+	}
+}
+@media (min-width: 992px) {
+	.section-heading {
+		font-size: 50px;
+	}
+	.section-padding {
+		padding: 25px 19px;
+	}
+}

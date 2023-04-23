@@ -1,0 +1,46 @@
+@media (max-width: 767px) {
+	.reviews.section-padding {
+		padding: 15px 0;
+	}
+}
+.reviews__box {
+	position: relative;
+	margin: 20px;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 3px 3px 10px #2e2e2e2e;
+	transition: transorm 0.3s;
+}
+.reviews__box:hover {
+	transform: scale(0.95);
+}
+.reviews__box-img {
+	position: absolute;
+	top: 8%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+}
+.reviews__box-img img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.reviews__box-quote {
+	font-size: 25px;
+	color: var(--dark-color);
+}
+.reviews__box-text {
+	margin-bottom: 10px;
+	margin-top: 30px;
+	font-size: 15px;
+	color: var(--main-color);
+	line-height: 1.5;
+}
+
+
+@media (min-width: 992px) {
+	.reviews__box-text {
+		font-size: 20px;
+	}
+}
