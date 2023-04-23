@@ -1,5 +1,5 @@
 const stripe = Stripe(
-	'pk_test_51MuyOHIxGTAPHbWi1RzWQPoQJGfUVlZjbgp9hbjVU3p9LqXOUhooglM5VQPOMvszKSqCpr7nZyj8TOhfsVm9LPWx00LAJr1WRk'
+	process.env.STRIPE_SECRET_KEY
 )
 const totalAmountDiv = document.querySelector('#amount-to-be-charged')
 const elements = stripe.elements()
@@ -23,9 +23,6 @@ form.addEventListener('submit', function (event) {
 	})
 })
 function stripeTokenHandler(token) {
-	const stripe = Stripe(
-		'pk_test_51MuyOHIxGTAPHbWi1RzWQPoQJGfUVlZjbgp9hbjVU3p9LqXOUhooglM5VQPOMvszKSqCpr7nZyj8TOhfsVm9LPWx00LAJr1WRk'
-	)
 	const form = document.getElementById('payment-form')
 	const hiddenInput = document.createElement('input')
 	hiddenInput.setAttribute('type', 'hidden')
