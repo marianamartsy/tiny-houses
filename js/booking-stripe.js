@@ -1,5 +1,5 @@
 const stripe = Stripe(
-	process.env.STRIPE_SECRET_KEY
+	'pk_test_51MuyOHIxGTAPHbWi1RzWQPoQJGfUVlZjbgp9hbjVU3p9LqXOUhooglM5VQPOMvszKSqCpr7nZyj8TOhfsVm9LPWx00LAJr1WRk'
 )
 const totalAmountDiv = document.querySelector('#amount-to-be-charged')
 const elements = stripe.elements()
