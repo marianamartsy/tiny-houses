@@ -1,3 +1,3 @@
 # tiny-houses
 
-https://github.com/marianamartsy/tiny-houses.git
+https://marianamartsy.github.io/tiny-houses/
