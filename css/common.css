@@ -19,6 +19,9 @@
 	--background-garadient-solid: linear-gradient(45deg, rgb(248, 45, 231), rgb(123, 103, 12));
 	scroll-behavior: smooth;
 }
+html {
+	scroll-behavior: smooth;
+}
 .container {
 	width: 100%;
 	max-width: 1200px;
