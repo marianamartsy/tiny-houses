@@ -18,10 +18,7 @@
 	--background-garadient: linear-gradient(45deg, rgba(245, 226, 194, 0.35), rgba(209, 120, 231, 0.35));
 	--background-garadient-solid: linear-gradient(45deg, rgb(248, 45, 231), rgb(123, 103, 12));
 	scroll-behavior: smooth;
-}
-html {
 	font-size: 62.5%;
-	scroll-behavior: smooth;
 }
 .container {
 	width: 100%;
