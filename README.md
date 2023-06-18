@@ -27,13 +27,13 @@ Tiny Houses Website (UI Project)
 
 The following resources have been used in the development of this project:
 
-Google Fonts - for the selection of font styles.
-Slick - for the responsive carousel/slider functionality.
-Pixabay - for providing royalty-free images used in the project.
-Kit Font Awesome - for the inclusion of icon fonts.
-Flatpickr Calendar - for the date picker functionality.
-Stripe - for the integration of the payment processing system.
-Formspree.io - for handling the form submission and email notifications.
+- Google Fonts - for the selection of font styles.
+- Slick - for the responsive carousel/slider functionality.
+- Pixabay - for providing royalty-free images used in the project.
+- Kit Font Awesome - for the inclusion of icon fonts.
+- Flatpickr Calendar - for the date picker functionality.
+- Stripe - for the integration of the payment processing system.
+- Formspree.io - for handling the form submission and email notifications.
 
 
 
