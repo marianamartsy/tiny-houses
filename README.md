@@ -1,3 +1,8 @@
+# Github Action. Continuous Integration
+
+![](https://github.com/marianamartsy/tiny-houses/actions/workflows/
+pages build and deployment/badge.svg)
+
 ## Live Demo
 
 https://marianamartsy.github.io/tiny-houses/
