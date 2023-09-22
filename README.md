@@ -1,5 +1,4 @@
 # Github Action. Continuous Integration
-
 ![](https://github.com/marianamartsy/tiny-houses/actions/workflows/static.yml/badge.svg)
 
 ## Live Demo
